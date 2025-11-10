@@ -9,11 +9,11 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/management/c3.html"
+      "dest": "/management/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/management/$1"
+      "src": "/",
+      "dest": "/management/c3.html"
     }
   ]
 }
