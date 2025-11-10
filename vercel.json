@@ -2,30 +2,34 @@
   "version": 2,
   "builds": [
     {
-      "src": "**/*.html",
+      "src": "management/**/*.html",
       "use": "@vercel/static"
     },
     {
-      "src": "**/*.js",
+      "src": "management/**/*.js",
       "use": "@vercel/static"
     },
     {
-      "src": "**/*.css",
+      "src": "management/**/*.css",
       "use": "@vercel/static"
     },
     {
-      "src": "**/*.json",
+      "src": "management/**/*.json",
       "use": "@vercel/static"
     },
     {
-      "src": "**/*.{jpg,png,svg,ico}",
+      "src": "management/**/*.{jpg,png,svg,ico}",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/",
+      "dest": "/management/c3.html"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/management/index.html"
+      "dest": "/management/$1"
     }
   ]
 }
